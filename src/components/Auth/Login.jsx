@@ -52,7 +52,7 @@ const Login = ({ handleLogin }) => {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-600">
-      <div className="border-2 border-emerald-600 rounded-xl p-10 bg-white shadow-lg w-96">
+      <div className="border-4 border-emerald-400 rounded-xl p-10 bg-white shadow-xxl w-96">
         <form
           onSubmit={(e) => submitHandler(e)}
           className="flex flex-col items-center justify-center space-y-6"
@@ -88,7 +88,7 @@ const Login = ({ handleLogin }) => {
 
           {/* Submit Button */}
           <button
-            className="w-full mt-4 bg-emerald-600 text-white font-semibold text-lg py-2 px-6 rounded-full hover:bg-emerald-700 transition-all"
+            className="w-[50%] mt-4 bg-emerald-600 text-white font-semibold text-lg py-2 px-6 rounded-full hover:bg-emerald-700 transition-all"
           >
             Log in
           </button>
