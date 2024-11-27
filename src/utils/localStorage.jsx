@@ -47,8 +47,8 @@ const employees = [
                 "newTask": false,
                 "completed": false,
                 "failed": false,
-                "taskTitle": "Fix bugs",
-                "taskDescription": "Resolve bugs reported in issue tracker",
+                "taskTitle": "Fix UI",
+                "taskDescription": "Resolve UI Interface",
                 "taskDate": "2024-10-14",
                 "category": "Development"
             }

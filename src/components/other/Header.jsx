@@ -1,18 +1,15 @@
 import React from "react";
 
 const Header = (props) => {
-  // Retrieve the logged-in user data from localStorage
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-
-  // Extract the username from the logged-in user data
   const username =
     loggedInUser?.role === "employee"
       ? loggedInUser?.data?.firstName
       : "Admin";
 
   const logOutUser = () => {
-    localStorage.removeItem("loggedInUser"); // Clear logged-in user from localStorage
-    props.changeUser(""); // Change the user state in App.js to null or ''
+    localStorage.removeItem("loggedInUser");
+    props.changeUser("");
   };
 
   return (
@@ -27,13 +24,18 @@ const Header = (props) => {
         </h2>
       </div>
 
-      {/* Logout Button */}
-      <button
-        onClick={logOutUser}
-        className="bg-red-600 hover:bg-red-700 text-white font-medium text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-      >
-        Log Out
-      </button>
+      {/* Beta Version Tag and Logout Button */}
+      <div className="flex flex-col items-center sm:items-end">
+        <span className="bg-yellow-300 text-yellow-900 font-bold text-xs sm:text-sm px-3 py-1 rounded-full mb-2">
+          Beta Version
+        </span>
+        <button
+          onClick={logOutUser}
+          className="bg-red-600 hover:bg-red-700 text-white font-medium text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+        >
+          Log Out
+        </button>
+      </div>
     </div>
   );
 };
